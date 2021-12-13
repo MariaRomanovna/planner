@@ -1,0 +1,64 @@
+﻿<Window x:Class="planner.Window.WindowServay"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:planner.Window"
+        mc:Ignorable="d"
+        Title="WindowServay" Height="450" Width="800">
+    <Grid Background="#06606B">
+        <StackPanel HorizontalAlignment="Center" 
+                    VerticalAlignment="Center"> 
+        <TextBlock Foreground="White"
+            FontSize="24">Опрос</TextBlock>
+            <TextBlock 
+                       Foreground="White"
+                       Margin="0 5 0 5"
+                       FontSize="18"
+                       >В ваш рацион включено мясо?</TextBlock>
+            <ComboBox x:Name="a1"
+                      Width="200"
+                      HorizontalAlignment="Left"
+                      Margin="0 0 0 5"
+                      DisplayMemberPath="NameAnswer"
+                      SelectedItem="{Binding Answers}"
+                      >
+                
+            </ComboBox>
+            <TextBlock x:Name="q2"
+                       Foreground="White"
+                       FontSize="18"
+                       Margin="0 0 0 5"
+                       >В вашем рационе содержаться все продукты кроме мяса?</TextBlock>
+            <ComboBox x:Name="a2"
+                      Width="200"
+                      HorizontalAlignment="Left"
+                      Margin="0 0 0 5"
+                       DisplayMemberPath="NameAnswer"
+                      SelectedItem="{Binding Answers}">
+
+            </ComboBox>
+            <TextBlock x:Name="q3"
+                       Foreground="White"
+                       FontSize="18"
+                       Margin="0 0 0 5"
+                       > В вашем рационе отсутствуют продукты животного происхождения?</TextBlock>
+            <ComboBox x:Name="a3"
+                      Width="200"
+                      HorizontalAlignment="Left"
+                      Margin="0 0 0 5"
+                       DisplayMemberPath="NameAnswer"
+                      SelectedItem="{Binding Answers}">
+
+            </ComboBox>
+            <Button Width="180"
+                    Height="30"
+                    FontWeight="Medium"
+                    Style="{StaticResource ButtonEnter}"
+                    Margin="0 10 0 0"
+                    Click="SaveClick">
+                Сохранить
+            </Button>
+        </StackPanel>
+    </Grid>
+</Window>
