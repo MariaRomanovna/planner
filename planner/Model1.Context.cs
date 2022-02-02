@@ -26,20 +26,18 @@ namespace planner
                 _context = new foodplanEntities();
             return _context;
         }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Answers> Answers { get; set; }
         public virtual DbSet<Categories> Categories { get; set; }
         public virtual DbSet<Ingredients> Ingredients { get; set; }
         public virtual DbSet<IngrRecipe> IngrRecipe { get; set; }
-        public virtual DbSet<Questions> Questions { get; set; }
         public virtual DbSet<Recipes> Recipes { get; set; }
         public virtual DbSet<Surveys> Surveys { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
-        public virtual DbSet<Types> Types { get; set; }
         public virtual DbSet<Users> Users { get; set; }
     }
 }

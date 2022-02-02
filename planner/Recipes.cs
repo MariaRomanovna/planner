@@ -9,7 +9,6 @@
 
 namespace planner
 {
-    using planner.Window;
     using System;
     using System.Collections.Generic;
     
@@ -20,19 +19,16 @@ namespace planner
         {
             this.IngrRecipe = new HashSet<IngrRecipe>();
         }
-       
-       
     
         public int IdRecipe { get; set; }
         public Nullable<int> IdCategory { get; set; }
-        public Nullable<int> IdType { get; set; }
         public string NameRecipe { get; set; }
         public byte[] ImgRecipe { get; set; }
         public string DescriptionRecipe { get; set; }
+        public string Status { get; set; }
     
         public virtual Categories Categories { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<IngrRecipe> IngrRecipe { get; set; }
-        public virtual Types Types { get; set; }
     }
 }

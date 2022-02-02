@@ -7,51 +7,141 @@
         mc:Ignorable="d"
         Title="WindowServay" Height="450" Width="800">
     <Grid Background="#06606B">
+        <ScrollViewer>
+            
+        
         <StackPanel HorizontalAlignment="Center" 
                     VerticalAlignment="Center"> 
         <TextBlock Foreground="White"
             FontSize="24">Опрос</TextBlock>
-            <TextBlock 
-                       Foreground="White"
+                
+            <TextBlock Foreground="White"
                        Margin="0 5 0 5"
                        FontSize="18"
-                       >В ваш рацион включено мясо?</TextBlock>
-            <ComboBox x:Name="a1"
-                      Width="200"
-                      HorizontalAlignment="Left"
-                      Margin="0 0 0 5"
-                      DisplayMemberPath="NameAnswer"
-                      SelectedItem="{Binding Answers}"
-                      >
-                
-            </ComboBox>
-            <TextBlock x:Name="q2"
-                       Foreground="White"
-                       FontSize="18"
-                       Margin="0 0 0 5"
-                       >В вашем рационе содержаться все продукты кроме мяса?</TextBlock>
-            <ComboBox x:Name="a2"
-                      Width="200"
-                      HorizontalAlignment="Left"
-                      Margin="0 0 0 5"
-                       DisplayMemberPath="NameAnswer"
-                      SelectedItem="{Binding Answers}">
+                       >1.Принимаете ли вы в пищу масло?
+            </TextBlock>
+                <RadioButton >
+                    Да
+                </RadioButton>
+                <RadioButton>
+                    Нет
+                </RadioButton>
+            
+            
+                <TextBlock Foreground="White"
+                           Margin="0 5 0 5"
+                           FontSize="18"
+                            >2.В вашем рационе содержится рыба?
+                </TextBlock>
+                <RadioButton >
+                    Да
+                </RadioButton>
+                <RadioButton>
+                    Нет
+                </RadioButton>
 
-            </ComboBox>
-            <TextBlock x:Name="q3"
-                       Foreground="White"
+                <TextBlock Foreground="White"
+                       Margin="0 5 0 5"
                        FontSize="18"
-                       Margin="0 0 0 5"
-                       > В вашем рационе отсутствуют продукты животного происхождения?</TextBlock>
-            <ComboBox x:Name="a3"
-                      Width="200"
-                      HorizontalAlignment="Left"
-                      Margin="0 0 0 5"
-                       DisplayMemberPath="NameAnswer"
-                      SelectedItem="{Binding Answers}">
+                       >3.Принимаете ли вы в пищу грибы?
+                </TextBlock>
+                <RadioButton >
+                    Да
+                </RadioButton>
+                <RadioButton>
+                    Нет
+                </RadioButton>
 
-            </ComboBox>
-            <Button Width="180"
+                <TextBlock Foreground="White"
+                       Margin="0 5 0 5"
+                       FontSize="18"
+                       >4.Едите ли вы мёд?
+                </TextBlock>
+                <RadioButton >
+                    Да
+                </RadioButton>
+                <RadioButton>
+                    Нет
+                </RadioButton>
+
+                <TextBlock Foreground="White"
+                       Margin="0 5 0 5"
+                       FontSize="18"
+                       >5.Присутствует ли в вашем рационе зефир?
+                </TextBlock>
+                <RadioButton >
+                    Да
+                </RadioButton>
+                <RadioButton>
+                    Нет
+                </RadioButton>
+
+                <TextBlock Foreground="White"
+                       Margin="0 5 0 5"
+                       FontSize="18"
+                       >6.Содержит ли ваш рацион мясо?
+                </TextBlock>
+                <RadioButton >
+                    Да
+                </RadioButton>
+                <RadioButton>
+                    Нет
+                </RadioButton>
+
+                <TextBlock Foreground="White"
+                       Margin="0 5 0 5"
+                       FontSize="18"
+                       >7.Вы питаетесь исключительно только растительными продуктами?
+                </TextBlock>
+                <RadioButton >
+                    Да
+                </RadioButton>
+                <RadioButton>
+                    Нет
+                </RadioButton>
+
+              
+                <TextBlock Foreground="White"
+                       Margin="0 5 0 5"
+                       FontSize="18"
+                       >8.Вы бы предпочли съесть стейк или овощной салат?
+                </TextBlock>
+                <RadioButton >
+                    Да
+                </RadioButton>
+                <RadioButton>
+                    Нет
+                </RadioButton>
+
+                <TextBlock Foreground="White"
+                       Margin="0 5 0 5"
+                       FontSize="18"
+                       >9.Как вы считаете есть ли разница между веганством и вегетерианством?
+                </TextBlock>
+                <RadioButton >
+                    Да
+                </RadioButton>
+                <RadioButton>
+                    Нет
+                </RadioButton>
+
+                <TextBlock Foreground="White"
+                       Margin="0 5 0 5"
+                       FontSize="18"
+                       >10.На ваш взгляд кто вы?
+                </TextBlock>
+                <RadioButton >
+                    Вегетерианец
+                </RadioButton>
+                <RadioButton>
+                    Мясоед
+                </RadioButton>
+                <RadioButton>
+                    Веган
+                </RadioButton>
+
+
+                <Button Width="180"
                     Height="30"
                     FontWeight="Medium"
                     Style="{StaticResource ButtonEnter}"
@@ -60,5 +150,6 @@
                 Сохранить
             </Button>
         </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Window>

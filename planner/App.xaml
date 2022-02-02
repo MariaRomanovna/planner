@@ -11,6 +11,7 @@
                 <ResourceDictionary Source="Themes/StylizeScrollBar.xaml"/>
                 <ResourceDictionary Source="Themes/TextBoxTheme.xaml"/>
                 <ResourceDictionary Source="Themes/ButtonEnter.xaml"/>
+                <ResourceDictionary Source="Themes/RadioButtonStyle.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
