@@ -30,9 +30,98 @@ namespace planner.Window
 
         private void SaveClick(object sender, RoutedEventArgs e)
         {
-            
+            int traditional = 0, vegan = 0, vegeterian = 0;
+            if (d1.IsChecked == true)
+            {
+                vegeterian += 1;
+                traditional += 1;
+            }
+            else { vegan += 1; }
+
+            if (d2.IsChecked == true)
+            {
+                traditional += 1;
+            }
+            else { vegan += 1; vegeterian += 1; }
+
+            if (d3.IsChecked == true)
+            {
+                vegan += 1; vegeterian += 1; traditional += 1;
+            }
+
+            if (d4.IsChecked == true)
+            {
+                vegeterian += 1; traditional += 1;
+            }
+            else { vegan += 1; }
+
+            if (d5.IsChecked == true)
+            {
+                vegeterian += 1; traditional += 1;
+            }
+            else { vegan += 1; }
+
+            if (d6.IsChecked == true)
+            {
+                traditional += 1;
+            }
+            else { vegan += 1; vegeterian += 1; }
+
+            if (d7.IsChecked == true)
+            {
+                vegan += 1;
+            }
+            else { traditional += 1; vegeterian += 1; }
+
+            if (d8.IsChecked == true)
+            {
+                traditional += 1;
+            }
+            else { vegan += 1; vegeterian += 1; }
+
+            if (d9.IsChecked == true)
+            {
+                vegan += 1; vegeterian += 1;
+            }
+            else { traditional += 1; }
+
+            if (vege.IsChecked == true) 
+            {
+                vegeterian += 1;
+            }
+            if (meat.IsChecked == true)
+            {
+                traditional += 1;
+            }
+            if (vegaan.IsChecked == true)
+            {
+                vegan += 1;
+            }
+
+           if(traditional>vegeterian && traditional > vegan)
+            {
+                NewUser.IdCategory = 1;
+                MessageBox.Show("Вам присвоена категория <Традиционная>");
+            }
+            if (traditional < vegeterian && vegeterian > vegan)
+            {
+                NewUser.IdCategory = 3;
+                MessageBox.Show("Вам присвоена категория <Вегетерианец>");
+            }
+            if (vegan > vegeterian && traditional < vegan)
+            {
+                NewUser.IdCategory = 2;
+                MessageBox.Show("Вам присвоена категория <Веган>");
+            }
+            MainWindow m = new MainWindow(NewUser);
+            m.Show();
+        
+        }
 
             
+
+
+
         }
     }
-}
+

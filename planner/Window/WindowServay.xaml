@@ -7,145 +7,154 @@
         mc:Ignorable="d"
         Title="WindowServay" Height="450" Width="800">
     <Grid Background="#06606B">
-        <ScrollViewer>
+        <ScrollViewer Margin="0 10 0 0">
             
         
         <StackPanel HorizontalAlignment="Center" 
-                    VerticalAlignment="Center"> 
+                    VerticalAlignment="Center"
+                    Margin="0 10 0 0"> 
         <TextBlock Foreground="White"
             FontSize="24">Опрос</TextBlock>
-                
+                <StackPanel> 
             <TextBlock Foreground="White"
                        Margin="0 5 0 5"
                        FontSize="18"
                        >1.Принимаете ли вы в пищу масло?
             </TextBlock>
-                <RadioButton >
+                <RadioButton x:Name="d1">
                     Да
                 </RadioButton>
-                <RadioButton>
+                <RadioButton x:Name="n1">
                     Нет
                 </RadioButton>
-            
-            
+            </StackPanel>
+                <StackPanel> 
                 <TextBlock Foreground="White"
                            Margin="0 5 0 5"
                            FontSize="18"
                             >2.В вашем рационе содержится рыба?
                 </TextBlock>
-                <RadioButton >
+                <RadioButton x:Name="d2">
                     Да
                 </RadioButton>
-                <RadioButton>
+                <RadioButton x:Name="n2">
                     Нет
                 </RadioButton>
-
+                </StackPanel>
+                <StackPanel> 
                 <TextBlock Foreground="White"
                        Margin="0 5 0 5"
                        FontSize="18"
                        >3.Принимаете ли вы в пищу грибы?
                 </TextBlock>
-                <RadioButton >
+                <RadioButton x:Name="d3">
                     Да
                 </RadioButton>
-                <RadioButton>
+                <RadioButton x:Name="n3">
                     Нет
                 </RadioButton>
+                </StackPanel>
 
+                <StackPanel> 
                 <TextBlock Foreground="White"
                        Margin="0 5 0 5"
                        FontSize="18"
                        >4.Едите ли вы мёд?
                 </TextBlock>
-                <RadioButton >
+                <RadioButton x:Name="d4">
                     Да
                 </RadioButton>
-                <RadioButton>
+                <RadioButton x:Name="n4">
                     Нет
                 </RadioButton>
-
+                </StackPanel>
+                <StackPanel> 
                 <TextBlock Foreground="White"
                        Margin="0 5 0 5"
                        FontSize="18"
                        >5.Присутствует ли в вашем рационе зефир?
                 </TextBlock>
-                <RadioButton >
+                <RadioButton x:Name="d5">
                     Да
                 </RadioButton>
-                <RadioButton>
+                <RadioButton x:Name="n5">
                     Нет
                 </RadioButton>
-
+                </StackPanel>
+                <StackPanel>
                 <TextBlock Foreground="White"
                        Margin="0 5 0 5"
                        FontSize="18"
                        >6.Содержит ли ваш рацион мясо?
                 </TextBlock>
-                <RadioButton >
+                <RadioButton x:Name="d6">
                     Да
                 </RadioButton>
-                <RadioButton>
+                <RadioButton x:Name="n6">
                     Нет
                 </RadioButton>
-
+                </StackPanel>
+                <StackPanel> 
                 <TextBlock Foreground="White"
                        Margin="0 5 0 5"
                        FontSize="18"
                        >7.Вы питаетесь исключительно только растительными продуктами?
                 </TextBlock>
-                <RadioButton >
+                <RadioButton x:Name="d7">
                     Да
                 </RadioButton>
-                <RadioButton>
+                <RadioButton x:Name="n7">
                     Нет
                 </RadioButton>
-
-              
+                </StackPanel>
+                <StackPanel> 
                 <TextBlock Foreground="White"
                        Margin="0 5 0 5"
                        FontSize="18"
                        >8.Вы бы предпочли съесть стейк или овощной салат?
                 </TextBlock>
-                <RadioButton >
+                <RadioButton x:Name="d8">
                     Да
                 </RadioButton>
-                <RadioButton>
+                <RadioButton x:Name="n8">
                     Нет
                 </RadioButton>
-
+                </StackPanel>
+                <StackPanel> 
                 <TextBlock Foreground="White"
                        Margin="0 5 0 5"
                        FontSize="18"
                        >9.Как вы считаете есть ли разница между веганством и вегетерианством?
                 </TextBlock>
-                <RadioButton >
+                <RadioButton x:Name="d9">
                     Да
                 </RadioButton>
-                <RadioButton>
+                <RadioButton x:Name="n9">
                     Нет
                 </RadioButton>
-
+                </StackPanel>
+                <StackPanel> 
                 <TextBlock Foreground="White"
                        Margin="0 5 0 5"
                        FontSize="18"
                        >10.На ваш взгляд кто вы?
                 </TextBlock>
-                <RadioButton >
+                <RadioButton x:Name="vege">
                     Вегетерианец
                 </RadioButton>
-                <RadioButton>
+                <RadioButton x:Name="meat">
                     Мясоед
                 </RadioButton>
-                <RadioButton>
+                <RadioButton x:Name="vegaan">
                     Веган
                 </RadioButton>
-
+                </StackPanel>
 
                 <Button Width="180"
                     Height="30"
                     FontWeight="Medium"
                     Style="{StaticResource ButtonEnter}"
-                    Margin="0 10 0 0"
+                    Margin="0 10 0 20"
                     Click="SaveClick">
                 Сохранить
             </Button>
