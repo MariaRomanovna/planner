@@ -114,10 +114,10 @@
                        >8.Вы бы предпочли съесть стейк или овощной салат?
                 </TextBlock>
                 <RadioButton x:Name="d8">
-                    Да
+                    Стейк
                 </RadioButton>
                 <RadioButton x:Name="n8">
-                    Нет
+                    Салат
                 </RadioButton>
                 </StackPanel>
                 <StackPanel> 

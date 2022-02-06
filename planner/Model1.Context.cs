@@ -20,13 +20,12 @@ namespace planner
             : base("name=foodplanEntities")
         {
         }
-        public static foodplanEntities GetContext()
+    public static foodplanEntities GetContext()
         {
             if (_context == null)
                 _context = new foodplanEntities();
             return _context;
         }
-
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();

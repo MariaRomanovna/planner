@@ -5,14 +5,270 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:planner.View"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="450" d:DesignWidth="600"
       Title="HomeView"
       Background="#06606B"
       IsVisibleChanged="Page_IsVisibleChanged">
 
     <Grid>
-      
-            <StackPanel> 
+        <ScrollViewer> 
+        <StackPanel> 
+            
+        <TextBlock Grid.Row="1" Text="Понедельник"
+                   Height="40"
+                   VerticalAlignment="Top"
+                       Foreground="White"
+                       FontSize="28"
+                       HorizontalAlignment="Left"
+                       Margin="0,0,0,10"/>
+                <ListBox Background="Transparent"  BorderBrush="Transparent" x:Name="Listt" >
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Vertical" > 
+               
+                    <Image          Width="150"
+                                    Height="150">
+                        <Image.Source >
+                            <Binding Path="ImgRecipe"></Binding>
+                        </Image.Source>
+                    </Image>
+                    <TextBlock Text="{Binding Path= NameRecipe}"
+                               Foreground="White"
+                       FontSize="18"> </TextBlock>
+                        <Button Content="Перейти"
+                                        Style="{StaticResource ButtonEnter}"
+                                    Name="btnEdit"
+                                    Click="btnEdit_Click"></Button>
+                  
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+        </ListBox>
+
+                <TextBlock Grid.Row="1" Text="Вторник"
+                   Height="40"
+                   VerticalAlignment="Top"
+                       Foreground="White"
+                       FontSize="28"
+                       HorizontalAlignment="Left"
+                       Margin="0,0,0,10"/>
+                <ListBox Background="Transparent"  BorderBrush="Transparent" x:Name="ListVt" >
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Vertical" >
+
+                                <Image          Width="150"
+                                    Height="150">
+                                    <Image.Source >
+                                        <Binding Path="ImgRecipe"></Binding>
+                                    </Image.Source>
+                                </Image>
+                                <TextBlock Text="{Binding Path= NameRecipe}"
+                               Foreground="White"
+                       FontSize="18"></TextBlock>
+                                <Button Content="Перейти"
+                                        Style="{StaticResource ButtonEnter}"
+                                    Name="btnEdit"
+                                    Click="btnEdit_Click"></Button>
+
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+
+                <TextBlock Grid.Row="1" Text="Среда"
+                   Height="40"
+                   VerticalAlignment="Top"
+                       Foreground="White"
+                       FontSize="28"
+                       HorizontalAlignment="Left"
+                       Margin="0,0,0,10"/>
+                <ListBox Background="Transparent"  BorderBrush="Transparent" x:Name="ListSr" >
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Vertical" >
+
+                                <Image          Width="150"
+                                    Height="150">
+                                    <Image.Source >
+                                        <Binding Path="ImgRecipe"></Binding>
+                                    </Image.Source>
+                                </Image>
+                                <TextBlock Text="{Binding Path= NameRecipe}"
+                               Foreground="White"
+                       FontSize="18"></TextBlock>
+                                <Button Content="Перейти"
+                                        Style="{StaticResource ButtonEnter}"
+                                    Name="btnEdit"
+                                    Click="btnEdit_Click"></Button>
+
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+
+                <TextBlock Grid.Row="1" Text="Четверг"
+                   Height="40"
+                   VerticalAlignment="Top"
+                       Foreground="White"
+                       FontSize="28"
+                       HorizontalAlignment="Left"
+                       Margin="0,0,0,10"/>
+                <ListBox Background="Transparent"  BorderBrush="Transparent" x:Name="ListCh" >
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Vertical" >
+
+                                <Image          Width="150"
+                                    Height="150">
+                                    <Image.Source >
+                                        <Binding Path="ImgRecipe"></Binding>
+                                    </Image.Source>
+                                </Image>
+                                <TextBlock Text="{Binding Path= NameRecipe}"
+                               Foreground="White"
+                       FontSize="18"></TextBlock>
+                                <Button Content="Перейти"
+                                        Style="{StaticResource ButtonEnter}"
+                                    Name="btnEdit"
+                                    Click="btnEdit_Click"></Button>
+
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+
+                <TextBlock Grid.Row="1" Text="Пятница"
+                   Height="40"
+                   VerticalAlignment="Top"
+                       Foreground="White"
+                       FontSize="28"
+                       HorizontalAlignment="Left"
+                       Margin="0,0,0,10"/>
+                <ListBox Background="Transparent"  BorderBrush="Transparent" x:Name="ListPt" >
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Vertical" >
+
+                                <Image          Width="150"
+                                    Height="150">
+                                    <Image.Source >
+                                        <Binding Path="ImgRecipe"></Binding>
+                                    </Image.Source>
+                                </Image>
+                                <TextBlock Text="{Binding Path= NameRecipe}"
+                               Foreground="White"
+                       FontSize="18"></TextBlock>
+                                <Button Content="Перейти"
+                                        Style="{StaticResource ButtonEnter}"
+                                    Name="btnEdit"
+                                    Click="btnEdit_Click"></Button>
+
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+
+                <TextBlock Grid.Row="1" Text="Суббота"
+                   Height="40"
+                   VerticalAlignment="Top"
+                       Foreground="White"
+                       FontSize="28"
+                       HorizontalAlignment="Left"
+                       Margin="0,0,0,10"/>
+                <ListBox Background="Transparent"  BorderBrush="Transparent" x:Name="ListSub" >
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Vertical" >
+
+                                <Image          Width="150"
+                                    Height="150">
+                                    <Image.Source >
+                                        <Binding Path="ImgRecipe"></Binding>
+                                    </Image.Source>
+                                </Image>
+                                <TextBlock Text="{Binding Path= NameRecipe}"
+                               Foreground="White"
+                       FontSize="18"></TextBlock>
+                                <Button Content="Перейти"
+                                        Style="{StaticResource ButtonEnter}"
+                                    Name="btnEdit"
+                                    Click="btnEdit_Click"></Button>
+
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+
+                <TextBlock Grid.Row="1" Text="Воскресенье"
+                   Height="40"
+                   VerticalAlignment="Top"
+                       Foreground="White"
+                       FontSize="28"
+                       HorizontalAlignment="Left"
+                       Margin="0,0,0,10"/>
+                <ListBox Background="Transparent" BorderBrush="Transparent" x:Name="ListVs" >
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Vertical" >
+
+                                <Image          Width="150"
+                                    Height="150">
+                                    <Image.Source >
+                                        <Binding Path="ImgRecipe"></Binding>
+                                    </Image.Source>
+                                </Image>
+                                <TextBlock Text="{Binding Path= NameRecipe}"
+                               Foreground="White"
+                       FontSize="18"></TextBlock>
+                                <Button Content="Перейти"
+                                        Style="{StaticResource ButtonEnter}"
+                                    Name="btnEdit"
+                                    Click="btnEdit_Click"></Button>
+
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </StackPanel>
+        </ScrollViewer>
+
+        <!--<StackPanel> 
         <TextBlock Grid.Row="1" Text="Рецепты"
                    Height="40"
                    VerticalAlignment="Top"
@@ -71,7 +327,7 @@
                 </DataGrid.Columns>
             </DataGrid>
            
-        </StackPanel>
+        </StackPanel>-->
             
     </Grid>
 </Page>

@@ -71,6 +71,7 @@ namespace planner.Window
                     MessageBox.Show($"Вы успешно зарегистрировались!");
                     WindowServay n = new WindowServay(NewUser);
                     n.Show();
+                    this.Hide();
 
                 }
             }

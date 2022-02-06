@@ -19,7 +19,7 @@ namespace planner.Window
     /// </summary>
     public partial class WindowServay
     {
-        private Users NewUser = new Users();
+        public Users NewUser = new Users();
         public WindowServay(Users user)
         {
             NewUser = user;
@@ -100,21 +100,29 @@ namespace planner.Window
 
            if(traditional>vegeterian && traditional > vegan)
             {
+                NewUser.IdSurvey= 1;
                 NewUser.IdCategory = 1;
+                foodplanEntities.GetContext().SaveChanges();
                 MessageBox.Show("Вам присвоена категория <Традиционная>");
+
             }
             if (traditional < vegeterian && vegeterian > vegan)
             {
+                NewUser.IdSurvey = 3;
                 NewUser.IdCategory = 3;
+                foodplanEntities.GetContext().SaveChanges();
                 MessageBox.Show("Вам присвоена категория <Вегетерианец>");
             }
             if (vegan > vegeterian && traditional < vegan)
             {
+                NewUser.IdSurvey = 2;
                 NewUser.IdCategory = 2;
+                foodplanEntities.GetContext().SaveChanges();
                 MessageBox.Show("Вам присвоена категория <Веган>");
             }
             MainWindow m = new MainWindow(NewUser);
             m.Show();
+            this.Hide();
         
         }
 
