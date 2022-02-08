@@ -11,7 +11,12 @@
       IsVisibleChanged="Page_IsVisibleChanged">
 
     <Grid>
-        <ScrollViewer> 
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+       
+        <ScrollViewer Grid.Row="1"> 
         <StackPanel> 
             
         <TextBlock Grid.Row="1" Text="Понедельник"

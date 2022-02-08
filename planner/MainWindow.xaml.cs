@@ -37,5 +37,10 @@ namespace planner
         {
             MyFrame.Navigate(new ProfileView(NewUser));
         }
+
+        private void AllRecipes_Click(object sender, RoutedEventArgs e)
+        {
+            MyFrame.Navigate(new AllRecipes());
+        }
     }
 }

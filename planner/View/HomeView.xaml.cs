@@ -36,6 +36,7 @@ namespace planner.View
             ListSub.ItemsSource = foodplanEntities.GetContext().Recipes.Where(b => b.IdCategory == NewUser.IdCategory).OrderBy(p => p.IdRecipe).ToList();
             ListVs.ItemsSource = foodplanEntities.GetContext().Recipes.Where(b => b.IdCategory == NewUser.IdCategory).OrderBy(p => p.IdRecipe).ToList();
 
+       
 
         }
 
@@ -47,12 +48,8 @@ namespace planner.View
 
         private void Page_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
-            if (Visibility == Visibility.Visible)
-            {
-            
-            }
+           
         }
-
-
+       
     }
 }
