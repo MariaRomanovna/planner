@@ -50,7 +50,6 @@
                              Height="50"
                              Foreground="White"
                              FontSize="14"
-                       
                              Style="{StaticResource MenuButtonTheme}"
                              Click="AllRecipes_Click"/>
 
@@ -60,8 +59,7 @@
             <Frame Grid.Row="1"
                Grid.Column="1"
                x:Name="MyFrame" 
-               NavigationUIVisibility="Hidden"
-               >
+               NavigationUIVisibility="Hidden">
 
             </Frame>
         </Grid>

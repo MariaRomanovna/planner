@@ -41,22 +41,33 @@ namespace planner.Window
 
             else
             {
+                
                     Users authUser = null;
                     using (foodplanEntities db = new foodplanEntities())
                     {
                         authUser = db.Users.Where(b => b.NameUser == login && b.Password == pass).FirstOrDefault();
                     }
+                if (authUser.TypeUser == 0)
+                {
                     if (authUser != null)
                     {
                         MessageBox.Show("Вы успешно вошли в систему!");
-                    MainWindow n = new MainWindow(authUser);
-                    n.Show();
+                        MainWindow n = new MainWindow(authUser);
+                        n.Show();
+                        this.Hide();
                     }
                     else
                     {
                         MessageBox.Show("Что-то пошло не так, проверьте введённые данные!");
-                        
+
                     }
+                }
+                else
+                { 
+                    AdminWindow a = new AdminWindow();
+                    a.Show();
+                }
+                   
             }
         }
 

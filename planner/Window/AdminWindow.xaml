@@ -1,0 +1,72 @@
+﻿<Window x:Class="planner.Window.AdminWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:planner.Window"
+        mc:Ignorable="d"
+        Title="AdminWindow" Height="450" Width="800" Background="#06606B"
+        IsVisibleChanged="Window_IsVisibleChanged">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0"
+                   Foreground="White"
+                   FontSize="18"
+                   Margin="10 10 0 0">Список рецептов на одобрение</TextBlock>
+        <ScrollViewer Grid.Row="1">
+            <StackPanel Grid.Row="1">
+            <ListBox Background="Transparent" 
+                     BorderBrush="Transparent"
+                     x:Name="Listt">
+                <ListBox.ItemTemplate>
+                    <DataTemplate> 
+                   
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center"> 
+                    <Image Width="100" Height="100">
+                        <Image.Source>
+                            <Binding Path="ImgRecipe"></Binding>
+                        </Image.Source>
+                    </Image>
+                    <TextBlock Text="{Binding Path=NameRecipe}"
+                               Foreground="White"
+                               FontSize="12"
+                               Margin="0 0 5 0"></TextBlock>
+                       
+                        <TextBlock Text="{Binding Path=StatusRecipe}"
+                               Foreground="White"
+                               FontSize="12"
+                                   Margin="0 0 5 0"></TextBlock>
+                        <StackPanel> 
+                        <Button Content="Подробнее"
+                                Height="30"
+                                Width="120"
+                                Margin="0 0 0 5"
+                                        Style="{StaticResource ButtonEnter}"
+                                    Name="btnEdit"
+                                    Click="btnEdit_Click"></Button>
+                        <Button Content="Одобрить"
+                                Height="30"
+                                Width="120"
+                                        Style="{StaticResource ButtonEnter}"
+                                    Name="btnOdobrit"
+                                    Click="btnOdobrit_Click"
+                                Margin="0 0 0 5"></Button>
+                        <Button Content="Отклонить"
+                                Height="30"
+                                Width="120"
+                                        Style="{StaticResource ButtonEnter}"
+                                    Name="btnDelete"
+                                    Click="btnDelete_Click"></Button>
+                        </StackPanel>
+                    </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </StackPanel>
+        </ScrollViewer>
+
+    </Grid>
+</Window>
