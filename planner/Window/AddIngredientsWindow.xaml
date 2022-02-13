@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:planner.Window"
         mc:Ignorable="d"
         Title="AddIngredientsWindow" Height="450" Width="800"
-        Background="#06606B">
+        Background="#06606B"
+         Icon="C:\Users\pavilion\source\repos\planner\planner\images\avocado (1).png">
     <Grid>
         
         <StackPanel Grid.Column="1">

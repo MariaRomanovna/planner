@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:planner.Window"
         mc:Ignorable="d"
         Title="EditUserWindow" Height="250" Width="600"
-         Background="#06606B">
+         Background="#06606B"
+         Icon="C:\Users\pavilion\source\repos\planner\planner\images\avocado (1).png">
     <Grid>
         <TextBlock FontSize="18"
                            Foreground="White"

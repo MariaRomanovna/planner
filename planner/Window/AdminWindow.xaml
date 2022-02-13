@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:planner.Window"
         mc:Ignorable="d"
         Title="AdminWindow" Height="450" Width="800" Background="#06606B"
-        IsVisibleChanged="Window_IsVisibleChanged">
+        IsVisibleChanged="Window_IsVisibleChanged"
+         Icon="C:\Users\pavilion\source\repos\planner\planner\images\avocado (1).png">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
