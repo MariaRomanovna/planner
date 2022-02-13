@@ -37,7 +37,7 @@ namespace planner.View
         }
         private void UpdateRecipes()
         {
-            var currentRecipe = foodplanEntities.GetContext().Recipes.ToList();
+            var currentRecipe = foodplanEntities.GetContext().Recipes.Where(p=>p.StatusRecipe== "Одобрено").ToList();
 
             if (ComboCategory.SelectedIndex > 0)
             {
