@@ -1,0 +1,90 @@
+﻿<Window x:Class="planner.Window.AddIngredientsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:planner.Window"
+        mc:Ignorable="d"
+        Title="AddIngredientsWindow" Height="450" Width="800"
+        Background="#06606B">
+    <Grid>
+        
+        <StackPanel Grid.Column="1">
+            <TextBlock Foreground="White"
+            FontSize="24"
+            Margin="10 10 0 0">
+                Ингредиенты
+            </TextBlock>
+            <TextBlock Foreground="White"
+            FontSize="18"
+            Margin="10 10 0 0">
+               Выберите ингредиенты из выпадающего списка.<LineBreak/>
+                Выбранные вами ингредиенты отобразятся в поле ниже.
+            </TextBlock>
+            <WrapPanel> 
+            <ComboBox Height="30"
+                         Width="200"
+                         Background="Transparent"
+                         BorderBrush="#FF044249"
+                         Margin="15 10 0 0"
+                          DisplayMemberPath="NameIngredient"
+                      HorizontalAlignment="Left"
+                          x:Name="ComboIngred" 
+                      >
+
+            </ComboBox>
+                <TextBox Height="30"
+                         Width="100"
+                         Background="Transparent"
+                         BorderBrush="#FF044249"
+                         Foreground="White"
+                         x:Name="kolich"
+                         Margin="20 0 10 0">
+                    
+                </TextBox>
+                <TextBlock Foreground="White"
+                           FontSize="18"
+                           VerticalAlignment="Center">кг</TextBlock>
+            <Button x:Name="AddFromList"
+                                    Height="30"
+                                    Width="100"
+                                    Style="{StaticResource ButtonEnter}"
+                                    FontWeight="Medium"
+                                    Click="AddFromList_Click"
+                                    HorizontalAlignment="Left"
+                                    Margin="10 10 0 0">
+                Добавить
+
+            </Button>
+            </WrapPanel>
+            <ScrollViewer> 
+            <ListBox x:Name="ListIngr" Background="Transparent">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <WrapPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <TextBlock Foreground="White"
+                                       FontSize="18"
+                                       Text="{Binding NameIngredient}"
+                                       Margin="10 0 0 0">
+
+                            </TextBlock>
+                               
+                            </WrapPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            </ScrollViewer>
+            <Button x:Name="SafeFromList"
+                                    Height="30"
+                                    Width="100"
+                                    Style="{StaticResource ButtonEnter}"
+                                    FontWeight="Medium"
+                                    Click="Safe_Click"
+                                    HorizontalAlignment="Center"
+                                    Margin="0 20 0 0">
+                Сохранить
+
+            </Button>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -28,13 +28,13 @@ namespace planner.View
             NewUser = user;
             InitializeComponent();
             foodplanEntities.GetContext().ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
-            Listt.ItemsSource = foodplanEntities.GetContext().Recipes.Where(b => b.IdCategory == NewUser.IdCategory).OrderBy(p=>p.IdRecipe).Take(2).Skip(1).ToList();
-            ListVt.ItemsSource = foodplanEntities.GetContext().Recipes.Where(b => b.IdCategory == NewUser.IdCategory).OrderBy(p => p.IdRecipe).ToList();
-            ListSr.ItemsSource = foodplanEntities.GetContext().Recipes.Where(b => b.IdCategory == NewUser.IdCategory).OrderBy(p => p.IdRecipe).ToList();
-            ListCh.ItemsSource = foodplanEntities.GetContext().Recipes.Where(b => b.IdCategory == NewUser.IdCategory).OrderBy(p => p.IdRecipe).ToList();
-            ListPt.ItemsSource = foodplanEntities.GetContext().Recipes.Where(b => b.IdCategory == NewUser.IdCategory).OrderBy(p => p.IdRecipe).ToList();
-            ListSub.ItemsSource = foodplanEntities.GetContext().Recipes.Where(b => b.IdCategory == NewUser.IdCategory).OrderBy(p => p.IdRecipe).ToList();
-            ListVs.ItemsSource = foodplanEntities.GetContext().Recipes.Where(b => b.IdCategory == NewUser.IdCategory).OrderBy(p => p.IdRecipe).ToList();
+            Listt.ItemsSource = foodplanEntities.GetContext().Recipes.Where(b => b.IdCategory == NewUser.IdCategory && b.StatusRecipe=="Одобрено").OrderBy(p=>p.IdRecipe).Take(2).Skip(1).ToList();
+            ListVt.ItemsSource = foodplanEntities.GetContext().Recipes.Where(b => b.IdCategory == NewUser.IdCategory && b.StatusRecipe == "Одобрено").OrderBy(p => p.IdRecipe).ToList();
+            ListSr.ItemsSource = foodplanEntities.GetContext().Recipes.Where(b => b.IdCategory == NewUser.IdCategory && b.StatusRecipe == "Одобрено").OrderBy(p => p.IdRecipe).ToList();
+            ListCh.ItemsSource = foodplanEntities.GetContext().Recipes.Where(b => b.IdCategory == NewUser.IdCategory && b.StatusRecipe == "Одобрено").OrderBy(p => p.IdRecipe).ToList();
+            ListPt.ItemsSource = foodplanEntities.GetContext().Recipes.Where(b => b.IdCategory == NewUser.IdCategory && b.StatusRecipe == "Одобрено").OrderBy(p => p.IdRecipe).ToList();
+            ListSub.ItemsSource = foodplanEntities.GetContext().Recipes.Where(b => b.IdCategory == NewUser.IdCategory && b.StatusRecipe == "Одобрено").OrderBy(p => p.IdRecipe).ToList();
+            ListVs.ItemsSource = foodplanEntities.GetContext().Recipes.Where(b => b.IdCategory == NewUser.IdCategory && b.StatusRecipe == "Одобрено").OrderBy(p => p.IdRecipe).ToList();
 
        
 

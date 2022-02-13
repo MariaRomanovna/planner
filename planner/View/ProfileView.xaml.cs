@@ -1,4 +1,5 @@
-﻿using System;
+﻿using planner.Window;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,10 +27,25 @@ namespace planner.View
             NewUser = user;
             InitializeComponent();
             Name.Text = NewUser.NameUser;
+            Pass.Text = NewUser.Password;
+            Email.Text = NewUser.Email;
+            
             Surveys ser = new Surveys();
             ser = foodplanEntities.GetContext().Surveys.Where(b => b.IdSurvey == NewUser.IdSurvey).FirstOrDefault();
             servay1.Text = ser.NameSurvey;
         }
 
+        private void AddButton_Click(object sender, RoutedEventArgs e)
+        {
+            AddRecipeWindow add = new AddRecipeWindow();
+            add.Show();
+        }
+
+        private void EditUserButton_Click(object sender, RoutedEventArgs e)
+        {
+            EditUserWindow ee = new EditUserWindow(NewUser);
+            ee.Show();
+            
+        }
     }
 }
