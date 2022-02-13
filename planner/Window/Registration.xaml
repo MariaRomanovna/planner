@@ -40,26 +40,26 @@
             Foreground="White"
             FontSize="18"
             Margin="5">Пароль</TextBlock>
-            <PasswordBox x:Name="TextPass" 
+            <TextBox x:Name="TextPass" 
                      Text="{Binding Password}"
                 Height="28"
                 Width="400"
                 Background="#148A99"
                 FontSize="14"
                 Margin="0 0 0 0"
-                Foreground="White"></PasswordBox>
+                Foreground="White"></TextBox>
            
             <TextBlock
             Foreground="White"
             FontSize="18"
             Margin="5">Повторите пароль</TextBlock>
-            <PasswordBox x:Name="TextPass1"
+            <TextBox x:Name="TextPass1"
              Height="28"
                 Width="400"
                 Background="#148A99"
                 FontSize="14"
                 Foreground="White"
-                     Margin="0 0 0 10"></PasswordBox>
+                     Margin="0 0 0 10"></TextBox>
           
             <Button
                 
